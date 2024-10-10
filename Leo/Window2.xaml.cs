@@ -30,5 +30,12 @@ namespace Leo
             Window1.Show();
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var MainWindow = new MainWindow();
+            MainWindow.Show();
+            this.Close();
+        }
     }
 }

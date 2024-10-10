@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Inventory" Height="450" Width="800">
     <Grid>
-        <Button Content="Back" HorizontalAlignment="Left" Margin="70,350,0,0" VerticalAlignment="Top" Height="30" Width="100" Click="Button_Click"/>
-
+        <Button Content="Back" HorizontalAlignment="Left" Margin="50,350,0,0" VerticalAlignment="Top" Height="30" Width="100" Click="Button_Click"/>
+        <Button Content="Leave" HorizontalAlignment="Left" Margin="40,400,0,0" VerticalAlignment="Top" Height="30" Width="100" Click="Button_Click_1"/>
     </Grid>
 </Window>
