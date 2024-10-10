@@ -14,16 +14,14 @@ namespace Leo
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    ///     public partial class MainWindow : Window
+    public partial class Settings : Window
     {
-        public MainWindow()
+        private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
+            var MainWindow = new MainWindow();
+            MainWindow.Show();
+            this.Close();
         }
     }
 }
