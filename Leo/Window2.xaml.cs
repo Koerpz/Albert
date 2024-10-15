@@ -37,5 +37,21 @@ namespace Leo
             MainWindow.Show();
             this.Close();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Page1();
+
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Page2();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Page3();
+        }
     }
 }
