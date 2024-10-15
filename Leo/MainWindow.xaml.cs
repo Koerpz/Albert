@@ -33,8 +33,8 @@ namespace Leo
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var Settings = new Settings();
-            Settings.Show();
+            var settings = new Settings();
+            settings.Show();
             this.Close();
         }
     }

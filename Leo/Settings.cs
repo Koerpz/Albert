@@ -17,7 +17,14 @@ namespace Leo
     ///     public partial class MainWindow : Window
     public partial class Settings : Window
     {
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        public Settings() => InitializeComponent();
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             var MainWindow = new MainWindow();
             MainWindow.Show();
