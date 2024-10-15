@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,20 +16,13 @@ using System.Windows.Shapes;
 namespace Leo
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SettingsAudio.xaml
     /// </summary>
-    public partial class Settings : Window
+    public partial class SettingsAudio : Page
     {
-        public Settings() => InitializeComponent();
-
-        private void InitializeComponent()
+        public SettingsAudio()
         {
-            throw new NotImplementedException();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
+            InitializeComponent();
         }
     }
 }
