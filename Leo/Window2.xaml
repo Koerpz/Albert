@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Leo"
         mc:Ignorable="d"
-        Title="Inventory" Height="450" Width="800">
+        Title="Options" Height="450" Width="800">
     <Grid>
         <Button Content="Back" HorizontalAlignment="Left" Margin="50,335,0,0" VerticalAlignment="Top" Height="30" Width="100" Click="Button_Click"/>
         <Button Content="Leave" HorizontalAlignment="Left" Margin="50,370,0,0" VerticalAlignment="Top" Height="30" Width="100" Click="Button_Click_1"/>

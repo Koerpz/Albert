@@ -9,8 +9,34 @@
       Title="Page1">
 
     <Grid>
-        <ListBox HorizontalAlignment="Left" Height="274" Margin="38,0,0,0" VerticalAlignment="Center" Width="454" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListBox_SelectionChanged"/>
-        <TextBlock HorizontalAlignment="Left" Height="38" Margin="206,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227"><Run Language="nl-nl" Text="Abilities"/></TextBlock>
+
+        <ListBox Name="AbilitiesListBox" Margin="10">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Image Source="{Binding Icon}" Width="32" Height="32" Margin="0,0,5,0"/>
+                        <Expander Header="{Binding Name}" Margin="0,0,0,5">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="{Binding Photo}" Width="64" Height="64" Margin="0,0,0,10"/>
+                                <TextBlock Margin="0,0,0,5">
+                                    <Run Text="Description: "/>
+                                    <Run Text="{Binding Description}"/>
+                                </TextBlock>
+                                <TextBlock Margin="0,0,0,5">
+                                    <Run Text="Cooldown: "/>
+                                    <Run Text="{Binding Cooldown}"/>
+                                    <Run Text=" seconds"/>
+                                </TextBlock>
+                                <TextBlock>
+                                    <Run Text="Energy Cost: "/>
+                                    <Run Text="{Binding EnergyCost}"/>
+                                </TextBlock>
+                            </StackPanel>
+                        </Expander>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
     </Grid>
 </Page>
