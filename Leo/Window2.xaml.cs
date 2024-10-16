@@ -53,5 +53,12 @@ namespace Leo
         {
             Main.Content = new Page3();
         }
+
+        private void Main_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+
+        }
+
     }
+
 }
