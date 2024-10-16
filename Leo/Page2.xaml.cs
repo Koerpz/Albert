@@ -23,9 +23,29 @@ namespace Leo
         public Page2()
         {
             InitializeComponent();
+
+            var equipmentItems = new List<Equipment>
+            {
+                 new Equipment { Name = "Sword" , Type = "Weapon", Icon = "/Assets/sword.png", Attack = 10, Defense = 0 },
+                 new Equipment { Name = "Shield", Type = "Armor", Icon = "/Assets/shield.png", Attack = 0, Defense = 10 },
+                 new Equipment { Name = "Helmet", Type = "Armor", Icon = "/Assets/helmet.png", Attack = 0, Defense = 10}
+            };
+            EquipmentListBox.ItemsSource = equipmentItems;
+        }
+        public class Equipment
+        {
+            public string Name { get; set; } = string.Empty;
+            public string Type { get; set; } = string.Empty;
+            public string Icon { get; set; } = string.Empty;
+            public int Attack { get; set; }
+            public int Defense { get; set; }
+        }
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void EquipmentListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
