@@ -10,7 +10,7 @@
 
     <Grid Background="White">
         
-        <!-- Rechterpaneel voor instellingen van de audio -->
+        <!-- Instellingen van de audio -->
         <StackPanel Grid.Column="1" Margin="0">
             <TextBlock Text="Audio Settings" FontSize="20" Margin="0,0,0,10"/>
 

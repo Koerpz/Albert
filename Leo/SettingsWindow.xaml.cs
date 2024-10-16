@@ -33,5 +33,12 @@ namespace Leo
         {
             SettingsBlanco.Content = new SettingsAudio();
         }
+
+        private void General_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsBlanco.Content = new GeneralSettings();
+        }
+
+       
     }
 }
