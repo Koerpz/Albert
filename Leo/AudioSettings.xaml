@@ -1,0 +1,27 @@
+﻿<Page x:Class="Leo.AudioSettings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Leo"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AudioSettings">
+
+    <Grid Background="White">
+
+        <!-- Instellingen van de audio -->
+        <StackPanel Grid.Column="1" Margin="0">
+            <TextBlock Text="Audio Settings" FontSize="20" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Music Volume" Margin="0,0,0,5"/>
+
+            <Slider Minimum="0" Maximum="100" Value="50" TickFrequency="10" 
+ TickPlacement="BottomRight" Margin="0,0,0,20"/>
+            <TextBlock Text="SFX Volume" Margin="0,0,0,5"/>
+            <Slider Minimum="0" Maximum="100" Value="50" TickFrequency="10" 
+ TickPlacement="BottomRight" Margin="0,0,0,20"/>
+
+        </StackPanel>
+    </Grid>
+</Page>

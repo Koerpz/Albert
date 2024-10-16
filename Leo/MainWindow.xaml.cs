@@ -28,13 +28,11 @@ namespace Leo
             this.Close();
         }
 
- 
-   
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var settings = new Settings();
-            settings.Show();
+            var SettingsWindow = new SettingsWindow();
+            SettingsWindow.Show();
             this.Close();
         }
     }
