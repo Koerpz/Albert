@@ -9,12 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\blockingshield.jpg" />
+    <None Remove="Assets\fierysword.jpg" />
     <None Remove="Assets\helmet.png" />
     <None Remove="Assets\shield.png" />
     <None Remove="Assets\sword.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\blockingshield.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\fierysword.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\helmet.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
