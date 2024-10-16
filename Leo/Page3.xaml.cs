@@ -23,11 +23,31 @@ namespace Leo
         public Page3()
         {
             InitializeComponent();
+
+            var iventoryItems = new List<InventoryItem>
+            {
+                new InventoryItem { Icon = "path/to/icon1.png", Name = "Gold Bar", Quantity = 1 },
+                new InventoryItem { Icon = "path/to/icon2.png", Name = "Coins", Quantity = 5 }
+            };
+            InventoryListBox.ItemsSource = iventoryItems;
+
+
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
+
+        private void ListBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+    }
+    public class InventoryItem
+    {
+        public string Icon { get; set; } = "default/path.png";
+        public string Name { get; set; } = "Default Item";
+        public int Quantity { get; set; }
     }
 }
