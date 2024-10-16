@@ -17,7 +17,7 @@ namespace Leo
     /// <summary>
     /// Interaction logic for GeneralSettings.xaml
     /// </summary>
-    public partial class GeneralSettings : Window
+    public partial class GeneralSettings : Page
     {
         public GeneralSettings()
         {

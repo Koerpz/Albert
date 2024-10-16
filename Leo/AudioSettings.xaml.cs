@@ -17,7 +17,7 @@ namespace Leo
     /// <summary>
     /// Interaction logic for AudioSettings.xaml
     /// </summary>
-    public partial class AudioSettings : Window
+    public partial class AudioSettings : Page
     {
         public AudioSettings()
         {
