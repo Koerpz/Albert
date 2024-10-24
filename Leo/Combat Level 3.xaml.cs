@@ -1,10 +1,11 @@
-﻿using static Leo.Page2;
+﻿using static Leo.Page3;
 using System.Windows.Controls;
 using System.Windows;
+using static Leo.Page2;
 
 namespace Leo
 {
-    public partial class Combat_Level_2 : Page
+    public partial class Combat_Level_3 : Page
     {
         private int playerHealth = 100;
         private int enemyHealth = 150;
@@ -13,28 +14,22 @@ namespace Leo
         private int playerDefensePower = 0;
         private bool fierySwordUsed = false;
         private bool spearThrowUsed = false;
-        private string? equippedWeapon;
+        private string? equippedWeapon = "Default Sword"; // Default weapon
 
-        public Combat_Level_2(Equipment equipment)
+        public Combat_Level_3(Equipment equipment)
         {
             InitializeComponent();
             EquipWeapon(equipment);
             UpdateStatus("Your turn! Choose an action.");
         }
 
-        private void EquipWeapon(Equipment? weapon)
+        private void EquipWeapon(Equipment weapon)
         {
             if (weapon != null)
             {
                 playerAttackPower = weapon.Attack;
                 playerDefensePower = weapon.Defense;
                 equippedWeapon = weapon.Name;
-            }
-            else
-            {
-                playerAttackPower = 10; // Default attack power
-                playerDefensePower = 0; // Default defense power
-                equippedWeapon = "None";
             }
         }
 
@@ -49,10 +44,10 @@ namespace Leo
             {
                 enemyHealth -= playerAttackPower;
                 EnemyHealthText.Text = enemyHealth.ToString();
-                UpdateStatus("You attacked the Dragon!");
+                UpdateStatus("You attacked the Shadow Beast!");
                 if (enemyHealth <= 0)
                 {
-                    MessageBox.Show("You defeated the Dragon!");
+                    MessageBox.Show("You defeated the Shadow Beast!");
                     this.NavigationService.Navigate(new VictoryPage());
                     return;
                 }
@@ -90,10 +85,10 @@ namespace Leo
                 enemyHealth -= playerAttackPower * 2;
                 EnemyHealthText.Text = enemyHealth.ToString();
                 fierySwordUsed = true;
-                UpdateStatus("You used Fiery Sword on the Dragon!");
+                UpdateStatus("You used Fiery Sword on the Shadow Beast!");
                 if (enemyHealth <= 0)
                 {
-                    MessageBox.Show("You defeated the Dragon!");
+                    MessageBox.Show("You defeated the Shadow Beast!");
                     this.NavigationService.Navigate(new VictoryPage());
                     return;
                 }
@@ -117,10 +112,10 @@ namespace Leo
                 enemyHealth -= playerAttackPower * 2;
                 EnemyHealthText.Text = enemyHealth.ToString();
                 spearThrowUsed = true;
-                UpdateStatus("You used Spear Throw on the Dragon!");
+                UpdateStatus("You used Spear Throw on the Shadow Beast!");
                 if (enemyHealth <= 0)
                 {
-                    MessageBox.Show("You defeated the Dragon!");
+                    MessageBox.Show("You defeated the Shadow Beast!");
                     this.NavigationService.Navigate(new VictoryPage());
                     return;
                 }
@@ -144,11 +139,11 @@ namespace Leo
             {
                 Dispatcher.Invoke(() =>
                 {
-                    playerHealth -= Math.Max(0, 15 - playerDefensePower);
+                    playerHealth -= Math.Max(0, 30 - playerDefensePower);
                     PlayerHealthText.Text = playerHealth.ToString();
                     if (playerHealth <= 0)
                     {
-                        MessageBox.Show("You were defeated by the Dragon.");
+                        MessageBox.Show("You were defeated by the Shadow Beast.");
                         this.NavigationService.Navigate(new GameOverPage());
                         return;
                     }

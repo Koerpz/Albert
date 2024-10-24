@@ -1,0 +1,27 @@
+﻿<Page x:Class="Leo.Combat_Level_4"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Combat Level 4">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Combat Begins!" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="10"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Player Health: " FontSize="18"/>
+                <TextBlock x:Name="PlayerHealthText" Text="100" FontSize="18"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Guardian Beast Health: " FontSize="18"/>
+                <TextBlock x:Name="EnemyHealthText" Text="150" FontSize="18"/>
+                <!-- Ensure this name matches -->
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+                <Button Content="Attack" Click="AttackButton_Click" Width="100" Margin="10"/>
+                <Button Content="Defend" Click="DefendButton_Click" Width="100" Margin="10"/>
+                <Button Content="Heal" Click="HealButton_Click" Width="100" Margin="10"/>
+                <Button Content="Fiery Sword" Click="FierySwordButton_Click" Width="100" Margin="10"/>
+                <Button Content="Spear Throw" Click="SpearThrowButton_Click" Width="100" Margin="10"/>
+            </StackPanel>
+            <TextBlock x:Name="StatusText" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -4,7 +4,7 @@ using System.Windows;
 
 namespace Leo
 {
-    public partial class Combat_Level_2 : Page
+    public partial class Combat_Level_5 : Page
     {
         private int playerHealth = 100;
         private int enemyHealth = 150;
@@ -15,26 +15,20 @@ namespace Leo
         private bool spearThrowUsed = false;
         private string? equippedWeapon;
 
-        public Combat_Level_2(Equipment equipment)
+        public Combat_Level_5(Equipment equipment)
         {
             InitializeComponent();
             EquipWeapon(equipment);
             UpdateStatus("Your turn! Choose an action.");
         }
 
-        private void EquipWeapon(Equipment? weapon)
+        private void EquipWeapon(Equipment weapon)
         {
             if (weapon != null)
             {
                 playerAttackPower = weapon.Attack;
                 playerDefensePower = weapon.Defense;
                 equippedWeapon = weapon.Name;
-            }
-            else
-            {
-                playerAttackPower = 10; // Default attack power
-                playerDefensePower = 0; // Default defense power
-                equippedWeapon = "None";
             }
         }
 
@@ -49,11 +43,11 @@ namespace Leo
             {
                 enemyHealth -= playerAttackPower;
                 EnemyHealthText.Text = enemyHealth.ToString();
-                UpdateStatus("You attacked the Dragon!");
+                UpdateStatus("You attacked the Peacekeeper Beast!");
                 if (enemyHealth <= 0)
                 {
-                    MessageBox.Show("You defeated the Dragon!");
-                    this.NavigationService.Navigate(new VictoryPage());
+                    MessageBox.Show("You defeated the Peacekeeper Beast!");
+                    this.NavigationService.Navigate(new EndingSlide()); // Navigate to EndingSlide
                     return;
                 }
                 playerTurn = false;
@@ -90,11 +84,11 @@ namespace Leo
                 enemyHealth -= playerAttackPower * 2;
                 EnemyHealthText.Text = enemyHealth.ToString();
                 fierySwordUsed = true;
-                UpdateStatus("You used Fiery Sword on the Dragon!");
+                UpdateStatus("You used Fiery Sword on the Peacekeeper Beast!");
                 if (enemyHealth <= 0)
                 {
-                    MessageBox.Show("You defeated the Dragon!");
-                    this.NavigationService.Navigate(new VictoryPage());
+                    MessageBox.Show("You defeated the Peacekeeper Beast!");
+                    this.NavigationService.Navigate(new EndingSlide()); // Navigate to EndingSlide
                     return;
                 }
                 playerTurn = false;
@@ -117,11 +111,11 @@ namespace Leo
                 enemyHealth -= playerAttackPower * 2;
                 EnemyHealthText.Text = enemyHealth.ToString();
                 spearThrowUsed = true;
-                UpdateStatus("You used Spear Throw on the Dragon!");
+                UpdateStatus("You used Spear Throw on the Peacekeeper Beast!");
                 if (enemyHealth <= 0)
                 {
-                    MessageBox.Show("You defeated the Dragon!");
-                    this.NavigationService.Navigate(new VictoryPage());
+                    MessageBox.Show("You defeated the Peacekeeper Beast!");
+                    this.NavigationService.Navigate(new EndingSlide()); // Navigate to EndingSlide
                     return;
                 }
                 playerTurn = true;
@@ -139,16 +133,16 @@ namespace Leo
 
         private void EnemyTurn()
         {
-            UpdateStatus("Dragon's turn...");
+            UpdateStatus("Peacekeeper Beast's turn...");
             System.Threading.Tasks.Task.Delay(1000).ContinueWith(_ =>
             {
                 Dispatcher.Invoke(() =>
                 {
-                    playerHealth -= Math.Max(0, 15 - playerDefensePower);
+                    playerHealth -= Math.Max(0, 40 - playerDefensePower);
                     PlayerHealthText.Text = playerHealth.ToString();
                     if (playerHealth <= 0)
                     {
-                        MessageBox.Show("You were defeated by the Dragon.");
+                        MessageBox.Show("You were defeated by the Peacekeeper Beast.");
                         this.NavigationService.Navigate(new GameOverPage());
                         return;
                     }
