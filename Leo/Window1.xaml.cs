@@ -30,5 +30,12 @@ namespace Leo
             Window2.Show();
             this.Close();
         }
+
+        private void Button_Click1(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new Levels());
+
+
+        }
     }
 }
