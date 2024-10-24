@@ -25,8 +25,8 @@ namespace Leo
             InitializeComponent();
             var abilities = new List<Ability>
             {
-                new Ability { Name = "Fiery Sword", Description = "Sword catches fire leading to extra damage.", Cooldown = 5, EnergyCost = 20, Icon = "/Assets/fierysword.jpg" },
-                new Ability { Name = "Shield Block", Description = "Blocks incoming attacks.", Cooldown = 10, EnergyCost = 15 , Icon = "/Assets/blockingshield.jpg" },
+                new Ability { Name = "Fiery Sword", Description = "Sword catches fire leading to extra damage.", Icon = "/Assets/fierysword.jpg" },
+                new Ability { Name = "Spear Throw", Description = "Skips enemy turn.", Icon = "/Assets/blockingshield.jpg" },
             };
             AbilitiesListBox.ItemsSource = abilities;
         }

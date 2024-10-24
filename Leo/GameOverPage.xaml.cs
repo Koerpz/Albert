@@ -32,7 +32,7 @@ namespace Leo
 
         private void MainMenu_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Window());
+            this.NavigationService.Navigate(new Levels());
         }
     }
 }
