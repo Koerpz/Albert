@@ -10,7 +10,7 @@
 
 
     <Grid>
-        <ListBox Name="LevelListBox" Margin="10" d:ItemsSource="{d:SampleData ItemCount=5}">
+        <ListBox Name="LevelListBox" Margin="10" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="LevelListBox_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Margin="5">

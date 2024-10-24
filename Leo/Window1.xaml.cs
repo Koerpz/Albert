@@ -22,6 +22,7 @@ namespace Leo
         public Window1()
         {
             InitializeComponent();
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -35,6 +36,11 @@ namespace Leo
         {
             MainFrame.Navigate(new Levels());
 
+
+        }
+
+        private void MainFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
 
         }
     }
