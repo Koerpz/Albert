@@ -28,7 +28,7 @@ namespace Leo
             var equipmentItems = new List<Equipment>
             {
                  new Equipment { Name = "Sword and Shield" , Icon = "/Assets/sword.png", Attack = 20, Defense = 10 },
-                 new Equipment { Name = "Spear and Shield", Icon = "/Assets/shield.png", Attack = 30, Defense = 10 },
+                 new Equipment { Name = "Spear and Shield", Icon = "/Assets/shield.png", Attack = 30, Defense = 5 },
 
             };
             EquipmentListBox.ItemsSource = equipmentItems;

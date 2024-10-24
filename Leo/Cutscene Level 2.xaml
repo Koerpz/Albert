@@ -8,7 +8,10 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Cutscene_Level_2">
 
-    <Grid>
-        
-    </Grid>
+    
+        <Grid x:Name="CutsceneGrid" MouseLeftButtonUp="CutsceneGrid_MouseLeftButtonUp">
+            <TextBlock x:Name="CutsceneTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" TextWrapping="Wrap" Margin="20"/>
+            <Button x:Name="ContinueButton" Content="Continue" Click="Continue_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,20" Visibility="Collapsed"/>
+
+        </Grid>
 </Page>
