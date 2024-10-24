@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static Leo.Page2;
 
 namespace Leo
 {
@@ -19,10 +20,12 @@ namespace Leo
     /// </summary>
     public partial class Window1 : Window
     {
+        public static List<Equipment> SelectedEquipments { get; set; } = new List<Equipment>();
+        public static Equipment SelectedEquipment { get; set; } = new Equipment();
+
         public Window1()
         {
             InitializeComponent();
-            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -35,13 +38,10 @@ namespace Leo
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new Levels());
-
-
         }
 
         private void MainFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
         {
-
         }
     }
 }

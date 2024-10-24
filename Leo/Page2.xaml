@@ -38,6 +38,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <Button Content="Confirm" Click="ConfirmButton_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10"/>
 
     </Grid>
 </Page>
