@@ -4,7 +4,7 @@ using System.Windows;
 
 namespace Leo
 {
-    public partial class Combat_Level_2 : Page
+    public partial class Combat_Level_4 : Page
     {
         private int playerHealth = 100;
         private int enemyHealth = 150;
@@ -15,26 +15,20 @@ namespace Leo
         private bool spearThrowUsed = false;
         private string? equippedWeapon;
 
-        public Combat_Level_2(Equipment equipment)
+        public Combat_Level_4(Equipment equipment)
         {
             InitializeComponent();
             EquipWeapon(equipment);
             UpdateStatus("Your turn! Choose an action.");
         }
 
-        private void EquipWeapon(Equipment? weapon)
+        private void EquipWeapon(Equipment weapon)
         {
             if (weapon != null)
             {
                 playerAttackPower = weapon.Attack;
                 playerDefensePower = weapon.Defense;
                 equippedWeapon = weapon.Name;
-            }
-            else
-            {
-                playerAttackPower = 10; // Default attack power
-                playerDefensePower = 0; // Default defense power
-                equippedWeapon = "None";
             }
         }
 
@@ -49,10 +43,10 @@ namespace Leo
             {
                 enemyHealth -= playerAttackPower;
                 EnemyHealthText.Text = enemyHealth.ToString();
-                UpdateStatus("You attacked the Dragon!");
+                UpdateStatus("You attacked the Guardian Beast!");
                 if (enemyHealth <= 0)
                 {
-                    MessageBox.Show("You defeated the Dragon!");
+                    MessageBox.Show("You defeated the Guardian Beast!");
                     this.NavigationService.Navigate(new VictoryPage());
                     return;
                 }
@@ -90,10 +84,10 @@ namespace Leo
                 enemyHealth -= playerAttackPower * 2;
                 EnemyHealthText.Text = enemyHealth.ToString();
                 fierySwordUsed = true;
-                UpdateStatus("You used Fiery Sword on the Dragon!");
+                UpdateStatus("You used Fiery Sword on the Guardian Beast!");
                 if (enemyHealth <= 0)
                 {
-                    MessageBox.Show("You defeated the Dragon!");
+                    MessageBox.Show("You defeated the Guardian Beast!");
                     this.NavigationService.Navigate(new VictoryPage());
                     return;
                 }
@@ -117,10 +111,10 @@ namespace Leo
                 enemyHealth -= playerAttackPower * 2;
                 EnemyHealthText.Text = enemyHealth.ToString();
                 spearThrowUsed = true;
-                UpdateStatus("You used Spear Throw on the Dragon!");
+                UpdateStatus("You used Spear Throw on the Guardian Beast!");
                 if (enemyHealth <= 0)
                 {
-                    MessageBox.Show("You defeated the Dragon!");
+                    MessageBox.Show("You defeated the Guardian Beast!");
                     this.NavigationService.Navigate(new VictoryPage());
                     return;
                 }
@@ -139,23 +133,47 @@ namespace Leo
 
         private void EnemyTurn()
         {
-            UpdateStatus("Dragon's turn...");
+            UpdateStatus("Guardian Beast's turn...");
             System.Threading.Tasks.Task.Delay(1000).ContinueWith(_ =>
             {
                 Dispatcher.Invoke(() =>
                 {
+                    // First attack
                     playerHealth -= Math.Max(0, 15 - playerDefensePower);
                     PlayerHealthText.Text = playerHealth.ToString();
                     if (playerHealth <= 0)
                     {
-                        MessageBox.Show("You were defeated by the Dragon.");
+                        MessageBox.Show("You were defeated by the Guardian Beast.");
                         this.NavigationService.Navigate(new GameOverPage());
                         return;
                     }
-                    playerTurn = true;
-                    UpdateStatus("Your turn! Choose an action.");
+
+                    // Delay before second attack
+                    UpdateStatus("Guardian Beast is preparing for a second strike...");
+                    System.Threading.Tasks.Task.Delay(1000).ContinueWith(__ =>
+                    {
+                        Dispatcher.Invoke(() =>
+                        {
+                            // Second attack
+                            playerHealth -= Math.Max(0, 20 - playerDefensePower);
+                            PlayerHealthText.Text = playerHealth.ToString();
+                            if (playerHealth <= 0)
+                            {
+                                MessageBox.Show("You were defeated by the Guardian Beast.");
+                                this.NavigationService.Navigate(new GameOverPage());
+                                return;
+                            }
+
+                            playerTurn = true;
+                            UpdateStatus("Your turn! Choose an action.");
+                        });
+                    });
                 });
             });
         }
+
     }
+
 }
+
+
