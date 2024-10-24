@@ -12,12 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static Leo.Page2;
 
 namespace Leo
 {
-    /// <summary>
-    /// Interaction logic for Cutscene_Level_1.xaml
-    /// </summary>
+   
     public partial class Cutscene_Level_1 : Page
     {
         private List<string> textSequence = new List<string>();
@@ -32,10 +31,13 @@ namespace Leo
         {
             textSequence = new List<string>
             {
-                "Once upon a time in the peaceful kingdom of Arisia...",
-                "Darkness began to spread as the evil sorcerer Zoltar sought to plunge the world into chaos.",
-                "A hero arises to challenge the darkness and restore peace."
-                
+                "In the peaceful village of Albertus, a young warrior dreamed of glory...",
+                "He was named after the village, Albert.",
+                "The village, cursed by an ancient spell, needed a hero...",
+                "Armed with merely a sword and shield, Albert set out to lift the curse and gain fame and glory...",
+                "His journey was fraught with danger, and now he faces his first formidable foe...",
+                "The Witch"
+
             };
             currentTextIndex = 0;
             DisplayCurrentText();
@@ -49,7 +51,7 @@ namespace Leo
             }
             else
             {
-                // All texts shown, navigate to the next page or end the cutscene
+                
                 Continue_Click(this, new RoutedEventArgs());
             }
         }

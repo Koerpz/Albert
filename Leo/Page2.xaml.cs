@@ -20,15 +20,16 @@ namespace Leo
     /// </summary>
     public partial class Page2 : Page
     {
+        private List<Equipment> selectedEquipments = new List<Equipment>(); 
         public Page2()
         {
             InitializeComponent();
 
             var equipmentItems = new List<Equipment>
             {
-                 new Equipment { Name = "Sword" , Type = "Weapon", Icon = "/Assets/sword.png", Attack = 10, Defense = 0 },
-                 new Equipment { Name = "Shield", Type = "Armor", Icon = "/Assets/shield.png", Attack = 0, Defense = 10 },
-                 new Equipment { Name = "Helmet", Type = "Armor", Icon = "/Assets/helmet.png", Attack = 0, Defense = 10}
+                 new Equipment { Name = "Sword and Shield" , Icon = "/Assets/sword.png", Attack = 20, Defense = 10 },
+                 new Equipment { Name = "Spear and Shield", Icon = "/Assets/shield.png", Attack = 30, Defense = 10 },
+
             };
             EquipmentListBox.ItemsSource = equipmentItems;
         }
@@ -40,14 +41,28 @@ namespace Leo
             public int Attack { get; set; }
             public int Defense { get; set; }
         }
+        private void EquipmentListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            selectedEquipments.Clear();
+            foreach (var item in EquipmentListBox.SelectedItems)
+            {
+                if (item is Equipment equipment)
+                {
+                    selectedEquipments.Add(equipment);
+                }
+            }
+            MessageBox.Show($"Selected {selectedEquipments.Count} items.");
+        }
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
-
-        private void EquipmentListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Window1.SelectedEquipments = selectedEquipments; 
+            MessageBox.Show("Equipments confirmed!");
         }
+
+
     }
 }
