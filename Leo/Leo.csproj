@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\achtergrond.jpg" />
     <None Remove="Assets\blockingshield.jpg" />
     <None Remove="Assets\fierysword.jpg" />
     <None Remove="Assets\helmet.png" />
@@ -17,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\achtergrond.jpg" />
     <Resource Include="Assets\blockingshield.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
