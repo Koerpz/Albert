@@ -32,8 +32,8 @@ namespace Leo
             }
             else
             {
-                playerAttackPower = 10; // Default attack power
-                playerDefensePower = 0; // Default defense power
+                playerAttackPower = 10; 
+                playerDefensePower = 0; 
                 equippedWeapon = "None";
             }
         }
