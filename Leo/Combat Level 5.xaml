@@ -4,14 +4,14 @@
       Title="Combat Level 5">
     <Grid>
         <StackPanel>
-            <TextBlock Text="Combat Begins!" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="10"/>
+            <TextBlock Text="Combat Begins!" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Margin="10" Foreground="White"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="Player Health: " FontSize="18"/>
-                <TextBlock x:Name="PlayerHealthText" Text="100" FontSize="18"/>
+                <TextBlock Text="Player Health: " FontSize="18" Foreground="White"/>
+                <TextBlock x:Name="PlayerHealthText" Text="100" FontSize="18" Foreground="White"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="Peacekeeper Beast Health: " FontSize="18"/>
-                <TextBlock x:Name="EnemyHealthText" Text="150" FontSize="18"/>
+                <TextBlock Text="Peacekeeper Beast Health: " FontSize="18" Foreground="White"/>
+                <TextBlock x:Name="EnemyHealthText" Text="150" FontSize="18" Foreground="White"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
                 <Button Content="Attack" Click="AttackButton_Click" Width="100" Margin="10"/>
@@ -20,7 +20,7 @@
                 <Button Content="Fiery Sword" Click="FierySwordButton_Click" Width="100" Margin="10"/>
                 <Button Content="Spear Throw" Click="SpearThrowButton_Click" Width="100" Margin="10"/>
             </StackPanel>
-            <TextBlock x:Name="StatusText" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Margin="10"/>
+            <TextBlock x:Name="StatusText" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Margin="10" Foreground="White"/>
         </StackPanel>
     </Grid>
 </Page>

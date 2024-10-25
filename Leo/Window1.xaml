@@ -9,7 +9,7 @@
     <Grid>
         <Button Content="Options" HorizontalAlignment="Left" Margin="39,90,0,0" VerticalAlignment="Top" Height="30" Width="100" Click="Button_Click"/>
         <Button Content="Levels" Click="Button_Click1" Width="100" Height="30" Margin="39,125,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" RenderTransformOrigin="0.84,-0.633"/>
-        <Frame Name="MainFrame" HorizontalAlignment="Left" Height="364" VerticalAlignment="Center" Width="554" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated" Margin="191,0,0,0"/>
+        <Frame Name="MainFrame" HorizontalAlignment="Left" Height="364" VerticalAlignment="Center" Width="554" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated" Margin="139,0,0,0"/>
 
 
     </Grid>

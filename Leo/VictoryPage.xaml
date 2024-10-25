@@ -10,7 +10,7 @@
 
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Victory!" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+            <TextBlock Text="Victory!" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20" Foreground="White"/>
             <Button Content="Continue" Click="Continue_Click" Width="200" Margin="0,0,0,20"/>
             
         </StackPanel>

@@ -10,7 +10,7 @@
 
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Game Over" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+            <TextBlock Text="Game Over" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20" Foreground="White"/>
             <Button Content="Retry" Click="Retry_Click" Width="200" Margin="0,0,0,20"/>
             <Button Content="Main Menu" Click="MainMenu_Click" Width="200"/>
         </StackPanel>

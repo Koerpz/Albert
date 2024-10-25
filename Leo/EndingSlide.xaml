@@ -4,11 +4,11 @@
       Title="EndingSlide">
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Congratulations!" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="10"/>
-            <TextBlock Text="Albert's Journey" FontSize="24" HorizontalAlignment="Center" Margin="10"/>
-            <TextBlock Text="Through his pursuits of glory, pride, joy, legacy, and peace, Albert became a true hero..." FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10"/>
-            <TextBlock Text="His legacy will be remembered for generations, as a beacon of hope and courage." FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10"/>
-            <TextBlock Text="Thank you for joining Albert's incredible journey." FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10"/>
+            <TextBlock Text="Congratulations!" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="10" Foreground="White"/>
+            <TextBlock Text="Albert's Journey" FontSize="24" HorizontalAlignment="Center" Margin="10" Foreground="White"/>
+            <TextBlock Text="Through his pursuits of glory, pride, joy, legacy, and peace, Albert became a true hero..." FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10" Foreground="White"/>
+            <TextBlock Text="His legacy will be remembered for generations, as a beacon of hope and courage." FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10" Foreground="White"/>
+            <TextBlock Text="Thank you for joining Albert's incredible journey." FontSize="18" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="10" Foreground="White"/>
             <Button Content="Continue" Click="MainMenu_Click" HorizontalAlignment="Center" Margin="20"/>
         </StackPanel>
     </Grid>
